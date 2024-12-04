@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Name1=$1   #Bandela we can pass as arguments/parameters
+${Name1}=$1   #Bandela we can pass as arguments/parameters
 Name2=$2    #Kativarapu
 
 echo "${Name1}: Hi $Name2, How are you doing!"
