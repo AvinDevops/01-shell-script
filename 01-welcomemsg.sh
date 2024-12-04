@@ -1,0 +1,1 @@
+echo "Hello world, this is first msg from shell script"
