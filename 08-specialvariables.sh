@@ -8,4 +8,5 @@ echo "Hostname: $HOSTNAME"
 echo "current script name: $0"
 echo "Home directory: $HOME"
 echo "process ID of this script: $$"
-sleep 60
+sleep 60 &
+echo "process ID of the last background command: $!"
