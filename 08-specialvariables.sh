@@ -6,3 +6,6 @@ echo "current working directory: $PWD"
 echo "who is the user: $USER"
 echo "Hostname: $HOSTNAME"
 echo "current script name: $0"
+echo "Home directory: $HOME"
+echo "process ID of this script: $$"
+sleep 60
