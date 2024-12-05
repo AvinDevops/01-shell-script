@@ -19,7 +19,7 @@ else
     echo "Mysql installation is success"
 fi
 
-dnf install gitt -y
+dnf install git -y
 if [ $? -ne 0 ]
 then
     echo "Git installation is failed"
