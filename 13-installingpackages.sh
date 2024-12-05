@@ -35,7 +35,7 @@ do
     dnf list installed mysql &>> $LOG
     if [ $? -eq 0 ]
     then
-        echo -e "$i is already installed...$G SKIPPING $N"
+        echo -e "$i is already installed...$R SKIPPING $N"
     else
         #echo -e "$i is not installed...$R now install it $N"
         dnf install $i -y &>> $LOG
