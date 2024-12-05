@@ -23,7 +23,13 @@ else
     echo "you have root access, please install"
 fi
 
-dnf install mysqll -y
+dnf install mysql -y
 VALIDATE $? "Installing Mysql"
+
+dnf install git -y
+VALIDATE $? "Installing Git"
+
+dnf install dockerrr -y
+VALIDATE $? "Installing docker"
 
 echo "Script reached last line of code..!"
