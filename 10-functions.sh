@@ -10,7 +10,7 @@ VALIDATE(){
 if [ $USERID -ne 0 ]
 then
     echo "please access with root user"
-    
+    exit 0
 else
     echo "you have root access, please install"
 fi
