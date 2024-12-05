@@ -9,6 +9,16 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
+VALIDATE(){
+    if [ $1 -ne 0 ]
+    then
+        echo -e "$2...$R failed $N"
+        exit1
+    else
+        echo -e "$2...$G Success $N"
+    fi
+}
+
 if [ $USERID -ne 0 ]
 then
     echo "you are not root user"
@@ -27,6 +37,8 @@ do
     then
         echo -e "$i is already installed...$G SKIPPING $N"
     else
-        echo -e "$i is not installed...$R now install it $N"
+        #echo -e "$i is not installed...$R now install it $N"
+        dnf install $i -y &>> $LOG
+        VALIDATE $? "Installing $i"
     fi
 done
