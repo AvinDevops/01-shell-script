@@ -15,4 +15,9 @@ else
     echo "you have root access"
 fi
 
-echo "all packages: $@"
+#echo "all packages: $@"
+
+for i in $@
+do 
+    echo $i
+done
