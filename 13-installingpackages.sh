@@ -21,12 +21,12 @@ fi
 
 for i in $@
 do 
-    echo $i
+    #echo $i
     dnf list installed mysql &>> $LOG
     if [ $? -ne 0 ]
     then
         echo -e "$i is already installed...$G SKIPPING $N"
     else
-        echo -e "$i is not installed...$R now install it"
+        echo -e "$i is not installed...$R now install it $N"
     fi
 done
