@@ -32,7 +32,7 @@ fi
 for i in $@
 do 
     #echo $i
-    dnf list installed mysql &>> $LOG
+    dnf list installed $i &>> $LOG
     if [ $? -eq 0 ]
     then
         echo -e "$i is already installed...$R SKIPPING $N"
