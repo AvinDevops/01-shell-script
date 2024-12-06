@@ -2,6 +2,13 @@
 
 set -e
 
+error_handler(){
+    echo "error line no is : $1"
+    echo "error description is : $2"
+}
+
+trap 'error_handler ${LINENO} "$BASH_COMMAND"' ERR
+
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
