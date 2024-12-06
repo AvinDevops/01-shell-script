@@ -12,7 +12,9 @@ else
     echo "you are root user"
 fi
 
+dnf install nginx -y 
+
 dnf install mysqll -y
 
-echo "Is sscript reached last step"
+echo "Is script reached last step"
 
