@@ -11,7 +11,7 @@ do
     FOLDER=$(echo $line | awk -F " " '{print $NF}' )
     if [ $USAGE -ge $DISK_LIMIT ]
     then
-        MESSAGE+="$FOLDER memory exceeds than disk limit $DISK_LIMIT, current usage: $USAGE"
+        MESSAGE+="$FOLDER memory exceeds than disk limit $DISK_LIMIT, current usage: $USAGE \n"
     fi
 done <<< $DISK_USAGE
 
