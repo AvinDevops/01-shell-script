@@ -11,6 +11,4 @@ do
     then
         MESSAGE="$FOLDER memory exceeds than disk limit $DISK_LIMIT, current usage: $USAGE"
     fi
-
-
 done <<< $DISK_USAGE
